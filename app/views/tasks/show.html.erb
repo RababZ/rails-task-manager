@@ -1,0 +1,17 @@
+<h1><%= @task.title %></h1>
+<h3><%= @task.details %></h3>
+<label class="container">
+  <% if @task.completed %>
+    <input type="checkbox" checked="checked">
+    <span class="checkmark"></span>
+    <p>This task has been completed</p><br>
+  <% else %>
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    <p>This task has not yet been completed</p><br>
+  <% end %>
+  <%= link_to "Back to list", list_path %>
+</label>
+
+
+
